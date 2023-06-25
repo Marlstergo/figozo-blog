@@ -1,0 +1,1 @@
+# figozo-blog
