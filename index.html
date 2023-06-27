@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figozo Blog Home</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon.png">
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="./src/assets/css/swiper-bundle.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./src/assets/css/main.css">
+  <!-- axios cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body x-data="" x-transition>
+  <!-- get navigation component -->
+
+  <div x-html="(await axios.get('./src/components/organs/navigation.html')).data"></div>
+
+  <!-- Search -->
+  <div class="search-form-container container" id="search-form-container">
+
+    <div class="form-container-inner">
+
+      <form action="" class="form">
+        <input class="form-input" type="text" placeholder="What are you looking for?">
+        <button class="btn form-btn" type="submit">
+          <i class="ri-search-line"></i>
+        </button>
+      </form>
+      <span class="form-note">Or press ESC to close.</span>
+
+    </div>
+
+    <button class="btn form-close-btn place-items-center" id="form-close-btn">
+      <i class="ri-close-line"></i>
+    </button>
+
+  </div>
+
+  <!-- Featured articles -->
+  <div x-html="(await axios.get('./src/components/organs/featured-articles.html')).data"></div>
+
+  <!-- Quick read -->
+  <div x-html="(await axios.get('./src/components/organs/quick-reads.html')).data"></div>
+  
+  <!-- Older posts -->
+  <div x-html="(await axios.get('./src/components/organs/older-posts.html')).data"></div>
+  
+  
+  <!-- Popular tags -->
+  <div x-html="(await axios.get('./src/components/organs/popular-tags.html')).data"></div>
+  
+  
+  <!-- Newsletter -->
+  <div x-html="(await axios.get('./src/components/organs/news-letter.html')).data"></div>
+  
+  
+  <!-- Footer -->
+  <div x-html="(await axios.get('./src/components/organs/footer.html')).data"></div>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/alpine.js"></script>
+  <!-- Swiper.js -->
+  <script src="./src/assets/js/swiper-bundle.min.js"></script>
+  <!-- Custom script -->
+  <script src="./src/assets/js/main.js"></script>
+</body>
+
+</html>
