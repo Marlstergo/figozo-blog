@@ -1,0 +1,21 @@
+<!-- Popular tags template -->
+<section class="popular-tags section">
+
+    <div class="container">
+
+        <h2 class="title section-title" data-name="Popular tags">Popular tags</h2>
+
+        <div class="popular-tags-container d-grid">
+            <!-- single category template -->
+            <template x-for="tag in $store.blogStore.popularTags">
+
+                <a href="#" class="article">
+                    <div x-html="(await axios.get('./src/components/molecules/popular-tag.html')).data">
+                    </div>
+                </a>
+
+            </template>
+        </div>
+
+    </div>
+</section>

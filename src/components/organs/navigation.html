@@ -1,0 +1,44 @@
+<header
+    class="header fixed top-0 left-0 w-full z-[999] bg-secondary-background-color dark:bg-dark-secondary-background-color"
+    id="header" x-init="$store.blogStore.onLoad()">
+
+    <nav class="navbar container">
+        <a href="./index.html">
+            <h2 class="logo">Figozo Blog</h2>
+        </a>
+
+        <div class="absolute top-[8.5rem] right-[1.5rem] w-[23rem] p-[1.5rem] bg-secondary-background-color dark:bg-dark-secondary-background-color lg:static lg:[width:initial] lg:[paddign:initial] lg:bg-transparent lg:opacity-100 lg:scale-100"
+            id="menu">
+            <ul class=" flex flex-row items-center justify-center gap-[2rem]">
+                <template x-for="link in $store.blogStore.menuLinks">
+                    <li class="list-item">
+                        <div x-html="(await axios.get('./src/components/atoms/link.html')).data"></div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+        <div class="list list-right">
+            <button class="btn place-items-center" id="theme-toggle-btn">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+
+            <button class="btn place-items-center" id="search-icon">
+                <i class="ri-search-line"></i>
+            </button>
+
+            <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                <i class="ri-menu-3-line open-menu-icon"></i>
+                <i class="ri-close-line close-menu-icon"></i>
+            </button>
+
+            <a href="#" class="text-light-color dark:text active:text-light-color lg:block hidden">Sign in</a>
+            <a href="#" class="btn sign-up-btn fancy-border screen-sm-hidden">
+                <span>Sign up</span>
+            </a>
+        </div>
+
+    </nav>
+
+</header>

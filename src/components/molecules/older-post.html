@@ -1,0 +1,18 @@
+<a href="#" class="article d-grid">
+    <div class="older-posts-article-image-wrapper">
+        <img x-bind:src="post.image" alt="" class="article-image">
+    </div>
+
+    <div class="article-data-container">
+
+        <div class="article-data">
+            <span x-text="post.text"></span>
+            <span class="article-data-spacer"></span>
+            <span x-text="post.readTime"></span>
+        </div>
+
+        <h3 x-text="post.title" class="title article-title"></h3>
+        <p x-text="post.description" class="article-description"></p>
+
+    </div>
+</a>

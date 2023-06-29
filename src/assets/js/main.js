@@ -224,6 +224,39 @@ document.addEventListener("alpine:init", () => {
                 { id: 4, title: "Careers", link: "#" },
             ],
         }
+        , menuLinks: [
+            {
+                id: 1,
+                title: "Home",
+                link: "/",
+            },
+            {
+                id: 2,
+                title: "Categories",
+                link: "#categories",
+            },
+            {
+                id: 3,
+                title: "Reviews",
+                link: "#reviews",
+            },
+            {
+                id: 4,
+                title: "News",
+                link: "#news",
+            },
+            {
+                id: 5,
+                title: "Membership",
+                link: "#membership",
+            },
+            {
+                id: 5,
+                title: "Contact",
+                link: "#contact",
+            },
+
+        ]
         ,
         onLoad() {
 

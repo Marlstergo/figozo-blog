@@ -1,0 +1,26 @@
+<!-- Older post template -->
+<section class="older-posts section">
+
+    <div class="container">
+
+        <h2 class="title section-title" data-name="Older posts">Older posts</h2>
+
+        <div class="older-posts-grid-wrapper d-grid">
+            <!-- single post template -->
+            <template x-for="post in $store.blogStore.olderPosts">
+
+                <div x-html="(await axios.get('./src/components/molecules/older-post.html')).data">
+                </div>
+
+            </template>
+
+        </div>
+
+        <div class="see-more-container">
+            <a href="#" class="btn see-more-btn place-items-center">See more <i
+                    class="ri-arrow-right-s-line"></i></i></a>
+        </div>
+
+    </div>
+
+</section>

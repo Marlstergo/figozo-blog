@@ -1,0 +1,43 @@
+<!-- featured article template -->
+<section class="featured-articles section section-header-offset" x-data>
+
+    <div class="featured-articles-container container d-grid">
+
+        <div class="featured-content d-grid">
+
+            <div class="headline-banner">
+                <h3 class="headline fancy-border">
+                    <span class="place-items-center">Breaking news</span>
+                </h3>
+                <span class="headline-description">Apple announces a new partnership...</span>
+            </div>
+
+            <!-- template for breaking news -->
+            <template x-for="news in $store.blogStore.breakingNews">
+                <!-- <p>his</p> -->
+                <a href="./post.html" x-effect="console.log(news.id)" x-bind:class="{
+                    'featured-article-1': news.id === 1,
+                    'featured-article-2': news.id === 2,
+                    'featured-article-3': news.id === 3
+                  }" class="article featured-article ">
+                    <div x-html="(await axios.get('./src/components/molecules/braking-news.html')).data">
+                    </div>
+                </a>
+            </template>
+
+        </div>
+
+        <div class="sidebar d-grid" x-data="">
+
+            <h3 class="title featured-content-title">Trending news</h3>
+            <!-- template from trending news -->
+            <template x-for="news in $store.blogStore.trendingNews">
+                <div x-html="(await axios.get('./src/components/molecules/trending-news.html')).data"></div>
+            </template>
+
+
+        </div>
+
+    </div>
+
+</section>

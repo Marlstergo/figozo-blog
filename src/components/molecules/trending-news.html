@@ -1,0 +1,18 @@
+<a href="#" class="trending-news-box">
+    <div class="trending-news-img-box">
+        <span class="trending-number place-items-center" x-text="news.id"></span>
+        <img x-bind:src="news.image" alt="" class="article-image">
+    </div>
+
+    <div class="trending-news-data">
+
+        <div class="article-data">
+            <span x-text="news.date"></span>
+            <span class="article-data-spacer"></span>
+            <span x-text="news.readTime"></span>
+        </div>
+
+        <h3 class="title article-title" x-text="news.title"></h3>
+
+    </div>
+</a>
