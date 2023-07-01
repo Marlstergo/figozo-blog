@@ -1,15 +1,18 @@
 <!-- featured article template -->
-<section class="featured-articles section section-header-offset" x-data>
+<section class=" [padding-block:2rem] mt-[7.4rem] " x-data>
 
-    <div class="featured-articles-container container d-grid">
+    <div class="gap-[2rem] grid-cols-1 lg:grid-cols-[1fr,40rem] container grid">
 
-        <div class="featured-content d-grid">
+        <div class="gap-[2rem] grid md:grid-cols-4 md:grid-rows-[5rem,repeat(4,1fr)] ">
 
-            <div class="headline-banner">
-                <h3 class="headline fancy-border">
-                    <span class="place-items-center">Breaking news</span>
+            <div class="md:col-start-1 col-end-[-1] text-[18px] flex items-center gap-[2rem] headline-banner">
+                <h3
+                    class="headline fancy-border :before-[animation:animate_border_.75s_linear_infinite] uppercase text-center tracking-[1px] p-1 h-full relative overflow-hidden before:absolute before:top-0 before:left-0 before:w-[200%] before:h-full before:[background-size:50%_100%] before:z-[5]">
+                    <span
+                        class="headline-banner h-full relative z-[10] inline-flex px-[1.5rem] py-[0.6rem] justify-center items-center ">Breaking
+                        news</span>
                 </h3>
-                <span class="headline-description">Apple announces a new partnership...</span>
+                <span class="">Apple announces a new partnership...</span>
             </div>
 
             <!-- template for breaking news -->
@@ -27,9 +30,9 @@
 
         </div>
 
-        <div class="sidebar d-grid" x-data="">
+        <div class="sidebar grid" x-data="">
 
-            <h3 class="title featured-content-title">Trending news</h3>
+            <h3 class="text-md text-center p-4">Trending news</h3>
             <!-- template from trending news -->
             <template x-for="news in $store.blogStore.trendingNews">
                 <div x-html="(await axios.get('./src/components/molecules/trending-news.html')).data"></div>
