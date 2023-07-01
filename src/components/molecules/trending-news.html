@@ -1,18 +1,18 @@
-<a href="#" class="trending-news-box">
-    <div class="trending-news-img-box">
-        <span class="trending-number place-items-center" x-text="news.id"></span>
-        <img x-bind:src="news.image" alt="" class="article-image">
+<a href="#" class="trending-news-box flex md:flex-row flex-col md:items-center gap-8 p-8 last-of-type:border-b-0 ">
+    <div class="trending-news-img-box relative w-full h-80 md:w-1/2 lg:w-40 lg:h-40">
+        <span class="trending-number flex justify-center items-center absolute -top-4 -left-4 z-[15] w-12 h-12 rounded-[50%]" x-text="news.id"></span>
+        <img x-bind:src="news.image" alt="" class="article-image absolute w-full h-full object-cover [transition:transform _25s]">
     </div>
 
-    <div class="trending-news-data">
+    <div class="text-sm md:m-auto md:text-center">
 
-        <div class="article-data">
+        <div class="flex items-center gap-8 text-xsm mb-4">
             <span x-text="news.date"></span>
-            <span class="article-data-spacer"></span>
+            <span class="w-2 h-2 [transform:rotate(45deg)]"></span>
             <span x-text="news.readTime"></span>
         </div>
 
-        <h3 class="title article-title" x-text="news.title"></h3>
+        <h3 class="title text-sm" x-text="news.title"></h3>
 
     </div>
 </a>
