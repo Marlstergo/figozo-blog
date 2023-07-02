@@ -1,32 +1,14 @@
-<!-- <a x-if="false" href="./post.html" class="article featured-article featured-article-1"> -->
-    <img src="./src/assets/images/featured/featured-1.jpg" alt="" class="article-image">
-    <span x-text="news.category" class="article-category">Technology</span>
+    <img src="./src/assets/images/featured/featured-1.jpg" alt="" class=" absolute w-full h-full object-cover [transition:0.25s] hover:[scale:1.01]">
+    <span x-text="news.category" class="article-category absolute top-4 right-4 p-2 text-base uppercase z-10"></span>
 
-    <div class="article-data-container">
+    <div class="article-data-container w-full absolute left-0 bottom-0 py-8 px-[6px] z-10 [transition:background-color_.5s]">
 
-        <div class="article-data">
-            <span x-text="news.date">Dec 5th 2021</span>
-            <span class="article-data-spacer"></span>
-            <span x-text="news.readTime">8 Min read</span>
+        <div class=" flex items-center gap-8 text-xsm mb-4">
+            <span x-text="news.date"></span>
+            <span class=" w-2 h-2 [transform:rotate(45deg)]"></span>
+            <span x-text="news.readTime"></span>
         </div>
 
-        <h3 x-text="news.title" class="title article-title">Is VR the future?</h3>
+        <h3 x-text="news.title" class="text-md"></h3>
 
     </div>
-<!-- </a> -->
-<!-- <a x-if="news.id !== 1" href="./post.html" class="article featured-article featured-article-2">
-    <img src="./src/assets/images/featured/featured-2.jpg" alt="" class="article-image">
-    <span x-text="news.category" class="article-category">Food</span>
-
-    <div class="article-data-container">
-
-        <div class="article-data">
-            <span x-text="news.date">Dec 6th 2021</span>
-            <span class="article-data-spacer"></span>
-            <span x-text="news.readTime">4 Min read</span>
-        </div>
-
-        <h3 x-text="news.title" class="title article-title">Fine dining 101</h3>
-
-    </div>
-</a> -->

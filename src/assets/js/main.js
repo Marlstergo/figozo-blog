@@ -263,7 +263,7 @@ document.addEventListener("alpine:init", () => {
             const selectElement = (selector) => {
                 const element = document.querySelector(selector);
                 if (element) return element;
-                alert(`Please add an ID of ${selector.slice(1)} to your HTML`);
+                // alert(`Please add an ID of ${selector.slice(1)} to your HTML`);
             };
 
             //Nav styles on scroll

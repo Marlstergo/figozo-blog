@@ -16,11 +16,13 @@
   <link rel="stylesheet" href="./src/assets/css/swiper-bundle.min.css" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="./src/assets/css/main.css">
+  <link rel="stylesheet" href="./src/assets/css/newcss.css">
   <!-- axios cdn -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
-<body x-data="" x-transition>
+<body x-data="" x-transition class=" ">
   <!-- get navigation component -->
 
   <div x-html="(await axios.get('./src/components/organs/navigation.html')).data"></div>
@@ -45,10 +47,9 @@
     </button>
 
   </div>
-
   <!-- Featured articles -->
   <div x-html="(await axios.get('./src/components/organs/featured-articles.html')).data"></div>
-
+  
   <!-- Quick read -->
   <div x-html="(await axios.get('./src/components/organs/quick-reads.html')).data"></div>
   

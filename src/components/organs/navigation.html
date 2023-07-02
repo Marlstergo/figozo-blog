@@ -1,15 +1,15 @@
 <header
-    class="header fixed top-0 left-0 w-full z-[999] bg-secondary-background-color dark:bg-dark-secondary-background-color"
+    class="dynamic-bg fixed top-0 left-0 w-full z-[999]"
     id="header" x-init="$store.blogStore.onLoad()">
 
-    <nav class="navbar container">
+    <nav class="navbar container flex items-center justify-between [padding-block:1.5rem] ">
         <a href="./index.html">
-            <h2 class="logo">Figozo Blog</h2>
+            <h2 class="text-md font-semibold ">Figozo Blog</h2>
         </a>
 
-        <div class="absolute top-[8.5rem] right-[1.5rem] w-[23rem] p-[1.5rem] bg-secondary-background-color dark:bg-dark-secondary-background-color lg:static lg:[width:initial] lg:[paddign:initial] lg:bg-transparent lg:opacity-100 lg:scale-100"
+        <div class="absolute top-[8.5rem] right-[1.5rem] w-[23rem] p-[1.5rem] bg-secondary-background-color dark:bg-dark-secondary-background-color lg:static lg:[width:initial] lg:[paddign:initial] lg:bg-transparent lg:opacity-100 lg:scale-100 hidden lg:flex"
             id="menu">
-            <ul class=" flex flex-row items-center justify-center gap-[2rem]">
+            <ul class=" flex flex-row items-center justify-center gap-8">
                 <template x-for="link in $store.blogStore.menuLinks">
                     <li class="list-item">
                         <div x-html="(await axios.get('./src/components/atoms/link.html')).data"></div>
@@ -19,12 +19,12 @@
         </div>
 
         <div class="list list-right">
-            <button class="btn place-items-center" id="theme-toggle-btn">
+            <button class=" place-items-center" id="theme-toggle-btn">
                 <i class="ri-sun-line sun-icon"></i>
                 <i class="ri-moon-line moon-icon"></i>
             </button>
 
-            <button class="btn place-items-center" id="search-icon">
+            <button class=" place-items-center" id="search-icon">
                 <i class="ri-search-line"></i>
             </button>
 
@@ -33,8 +33,8 @@
                 <i class="ri-close-line close-menu-icon"></i>
             </button>
 
-            <a href="#" class="text-light-color dark:text active:text-light-color lg:block hidden">Sign in</a>
-            <a href="#" class="btn sign-up-btn fancy-border screen-sm-hidden">
+            <a href="#" class=" lg:block hidden">Sign in</a>
+            <a href="#" class="btn p-1 fancy-border screen-sm-hidden">
                 <span>Sign up</span>
             </a>
         </div>

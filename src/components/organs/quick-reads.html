@@ -1,0 +1,31 @@
+<section class="quick-read section"  x-init="$store.blogStore.swiper()">
+
+    <div class="container">
+
+        <h2 class="title section-title" data-name="Quick read">Quick read</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides template-->
+                <template x-for="news in $store.blogStore.quickReads">
+                    <!-- <p>his</p> -->
+                    <a href="#" class="article swiper-slide">
+
+                        <div x-html="(await axios.get('./src/components/molecules/quick-read.html')).data"></div>
+                    </a>
+                </template>
+
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev swiper-controls"></div>
+            <div class="swiper-button-next swiper-controls"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+</section>
+
+</html>
